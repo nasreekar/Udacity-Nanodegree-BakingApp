@@ -27,7 +27,7 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/recipe_image_placeholder"
                 android:scaleType="centerCrop"
-                tools:src="@drawable/cheese_cake" />
+                tools:src="@drawable/default_recipe" />
 
             <TextView
                 android:id="@+id/tv_recipeTitle"
