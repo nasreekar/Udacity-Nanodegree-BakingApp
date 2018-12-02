@@ -14,7 +14,7 @@ import com.example.abhijithsreekar.bakersinn.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-class RecipeViewHolder extends RecyclerView.ViewHolder {
+class RecipeViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     @BindView(R.id.tv_recipeTitle)
     TextView recipeTitle;
@@ -22,9 +22,13 @@ class RecipeViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.iv_recipeImage)
     ImageView recipeImage;
 
-    RecipeViewHolder(View itemView) {
+    private RecyclerViewClickListener clickListener;
+
+    RecipeViewHolder(View itemView, RecyclerViewClickListener mListener) {
         super(itemView);
         ButterKnife.bind(this, itemView);
+        itemView.setOnClickListener(this);
+        this.clickListener = mListener;
     }
 
     void bindRecipe(Context context, Recipe recipe,int imageId) {
@@ -38,5 +42,10 @@ class RecipeViewHolder extends RecyclerView.ViewHolder {
                     .load(imageId)
                     .into(recipeImage);
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        clickListener.onClick(view,getAdapterPosition());
     }
 }
