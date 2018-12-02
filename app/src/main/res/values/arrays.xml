@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="recipeImages">
+        <item>@drawable/nutella_pie</item>
+        <item>@drawable/brownies</item>
+        <item>@drawable/yellow_cake</item>
+        <item>@drawable/cheese_cake</item>
+        <item>@drawable/default_recipe</item>
+    </string-array>
+</resources>

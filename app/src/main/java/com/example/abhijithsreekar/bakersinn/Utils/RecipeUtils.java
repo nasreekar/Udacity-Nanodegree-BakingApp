@@ -1,8 +1,10 @@
 package com.example.abhijithsreekar.bakersinn.Utils;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 
 import com.example.abhijithsreekar.bakersinn.Model.Recipe;
+import com.example.abhijithsreekar.bakersinn.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -29,5 +31,17 @@ public class RecipeUtils {
             e.printStackTrace();
         }
         return recipes;
+    }
+
+    public static int[] getRecipeImages(Context context) {
+        TypedArray typedArray = context.getResources().obtainTypedArray(R.array.recipeImages);
+        int count = typedArray.length();
+        int[] ids = new int[count];
+        for (int i = 0; i < count; i++) {
+            ids[i] = typedArray.getResourceId(i, 0);
+        }
+        typedArray.recycle();
+
+        return ids;
     }
 }

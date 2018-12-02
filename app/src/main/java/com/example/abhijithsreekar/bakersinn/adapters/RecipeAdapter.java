@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.abhijithsreekar.bakersinn.Model.Recipe;
 import com.example.abhijithsreekar.bakersinn.R;
+import com.example.abhijithsreekar.bakersinn.Utils.RecipeUtils;
 
 import java.util.List;
 
@@ -15,10 +16,12 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
 
     private Context context;
     private List<Recipe> recipeList;
+    private int[] imageIds;
 
     public RecipeAdapter(Context context, List<Recipe> recipeList) {
         this.context = context;
         this.recipeList = recipeList;
+        this.imageIds = RecipeUtils.getRecipeImages(context);
     }
 
     @NonNull
@@ -30,7 +33,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull RecipeViewHolder recipeViewHolder, int i) {
         Recipe recipe = recipeList.get(i);
-        recipeViewHolder.bindRecipe(recipe);
+        recipeViewHolder.bindRecipe(context,recipe,imageIds[i]);
     }
 
     @Override
