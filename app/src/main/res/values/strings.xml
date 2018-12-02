@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BakersInn</string>
+    <string name="recipe_name_placeholder">Nutella Pie</string>
+    <string name="recipe_image_placeholder">Recipe Item Image</string>
 </resources>
