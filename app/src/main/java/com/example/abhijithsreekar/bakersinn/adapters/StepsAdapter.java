@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.models.RecipeStep;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.StepsViewHol
     @Override
     public StepsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(android.R.layout.simple_list_item_1, parent, false);
+        View view = layoutInflater.inflate(R.layout.layout_steps_item, parent, false);
         return new StepsViewHolder(view);
     }
 
@@ -46,7 +47,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.StepsViewHol
 
     class StepsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        @BindView(android.R.id.text1)
+        @BindView(R.id.tv_step_shortDesc)
         TextView stepDescription;
 
         StepsViewHolder(View itemView) {

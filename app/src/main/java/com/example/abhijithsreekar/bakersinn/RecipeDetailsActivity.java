@@ -19,7 +19,6 @@ public class RecipeDetailsActivity extends AppCompatActivity
         implements StepsFragment.OnStepItemClickListener {
 
     private boolean mTwoPane;
-    //private RecipeStep stepsModelSave;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +69,6 @@ public class RecipeDetailsActivity extends AppCompatActivity
     @Override
     public void onStepItemClicked(RecipeStep step) {
         if (mTwoPane) {
-            //stepsModelSave = step;
             StepDetailFragment recipeStepDetailFragment = StepDetailFragment.newInstance(step);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.detail_container, recipeStepDetailFragment)
