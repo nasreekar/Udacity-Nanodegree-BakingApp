@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="GlobalH1">
+    <style name="ContentTextStyle">
         <item name="android:textSize">15sp</item>
         <item name="android:lineSpacingExtra">7sp</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:fontFamily">@font/mulibold</item>
+        <item name="android:fontFamily">@font/mulilight</item>
+        <item name="android:lineHeight">21sp</item>
     </style>
 </resources>

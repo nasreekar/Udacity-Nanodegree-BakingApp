@@ -1,14 +1,16 @@
 package com.example.abhijithsreekar.bakersinn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
-import com.example.abhijithsreekar.bakersinn.Model.Recipe;
-import com.example.abhijithsreekar.bakersinn.Model.RecipeIngredient;
-import com.example.abhijithsreekar.bakersinn.Model.RecipeStep;
-import com.example.abhijithsreekar.bakersinn.Utils.Constants;
+import com.example.abhijithsreekar.bakersinn.fragments.IngredientsFragment;
+import com.example.abhijithsreekar.bakersinn.fragments.StepsFragment;
+import com.example.abhijithsreekar.bakersinn.models.Recipe;
+import com.example.abhijithsreekar.bakersinn.models.RecipeIngredient;
+import com.example.abhijithsreekar.bakersinn.models.RecipeStep;
+import com.example.abhijithsreekar.bakersinn.utils.Constants;
 
 import java.util.List;
 
@@ -58,12 +60,8 @@ public class RecipeDetailsActivity extends AppCompatActivity
 
     @Override
     public void onStepItemClicked(RecipeStep step) {
-       /* Intent intent = new Intent(this, StepDetailActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable("ser", stepsModel);
-        intent.putExtra(Intent.EXTRA_TEXT, bundle);
-        startActivity(intent);*/
-
-        Toast.makeText(this, step.getShortDescription(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, StepDetailActivity.class);
+        intent.putExtra(Constants.SELECTED_STEP_TO_SEE_VIDEO, step);
+        startActivity(intent);
     }
 }

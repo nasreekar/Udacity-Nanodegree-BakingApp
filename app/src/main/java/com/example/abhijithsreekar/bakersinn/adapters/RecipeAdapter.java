@@ -8,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.abhijithsreekar.bakersinn.Model.Recipe;
+import com.example.abhijithsreekar.bakersinn.models.Recipe;
 import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.RecipeDetailsActivity;
-import com.example.abhijithsreekar.bakersinn.Utils.Constants;
-import com.example.abhijithsreekar.bakersinn.Utils.RecipeUtils;
+import com.example.abhijithsreekar.bakersinn.utils.Constants;
+import com.example.abhijithsreekar.bakersinn.utils.RecipeUtils;
 
 import java.util.List;
 

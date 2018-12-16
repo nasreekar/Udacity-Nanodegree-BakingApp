@@ -1,4 +1,4 @@
-package com.example.abhijithsreekar.bakersinn;
+package com.example.abhijithsreekar.bakersinn.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,8 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.abhijithsreekar.bakersinn.Model.RecipeStep;
+import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.adapters.StepsAdapter;
+import com.example.abhijithsreekar.bakersinn.models.RecipeStep;
 
 import java.util.List;
 

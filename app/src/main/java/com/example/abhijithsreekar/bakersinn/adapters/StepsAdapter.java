@@ -1,13 +1,12 @@
 package com.example.abhijithsreekar.bakersinn.adapters;
 
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.abhijithsreekar.bakersinn.Model.RecipeStep;
+import com.example.abhijithsreekar.bakersinn.models.RecipeStep;
 
 import java.util.List;
 
@@ -36,9 +35,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.StepsViewHol
 
     @Override
     public void onBindViewHolder(StepsViewHolder holder, int position) {
-        Context context = holder.itemView.getContext();
-
-        holder.stepDescription.setText(stepsList.get(position).getDescription());
+        holder.stepDescription.setText(stepsList.get(position).getShortDescription());
     }
 
     @Override

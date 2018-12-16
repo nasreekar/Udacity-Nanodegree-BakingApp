@@ -1,4 +1,4 @@
-package com.example.abhijithsreekar.bakersinn;
+package com.example.abhijithsreekar.bakersinn.fragments;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -10,8 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.abhijithsreekar.bakersinn.Model.RecipeIngredient;
+import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.adapters.IngredientsAdapter;
+import com.example.abhijithsreekar.bakersinn.models.RecipeIngredient;
 
 import java.util.List;
 
@@ -24,18 +25,17 @@ public class IngredientsFragment extends Fragment {
     @BindView(R.id.lv_ingredients)
     RecyclerView ingredientList;
 
-    private IngredientsAdapter adapter;
-
-
-    public IngredientsFragment() {}
+    public IngredientsFragment() {
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_ingredients, container, false);
         ButterKnife.bind(this, rootView);
+
         ingredientList.setLayoutManager(new LinearLayoutManager(rootView.getContext(), LinearLayoutManager.VERTICAL, false));
-        adapter = new IngredientsAdapter();
+        IngredientsAdapter adapter = new IngredientsAdapter();
         ingredientList.setAdapter(adapter);
         ingredientList.setNestedScrollingEnabled(false);
         adapter.setIngredientsModelList(ingredientsList);
@@ -52,7 +52,7 @@ public class IngredientsFragment extends Fragment {
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
 
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable("state");
             ingredientList.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
         }

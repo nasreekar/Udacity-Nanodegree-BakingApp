@@ -1,4 +1,4 @@
-package com.example.abhijithsreekar.bakersinn.Model;
+package com.example.abhijithsreekar.bakersinn.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -22,7 +22,7 @@ public class RecipeStep implements Parcelable {
     @SerializedName("thumbnailURL")
     private String thumbnailURL;
 
-    protected RecipeStep(Parcel in) {
+    private RecipeStep(Parcel in) {
         if (in.readByte() == 0) {
             id = null;
         } else {

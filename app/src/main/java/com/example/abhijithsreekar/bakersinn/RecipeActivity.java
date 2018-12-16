@@ -4,11 +4,11 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.abhijithsreekar.bakersinn.Utils.RecipeUtils;
+import com.example.abhijithsreekar.bakersinn.utils.RecipeUtils;
 import com.example.abhijithsreekar.bakersinn.adapters.RecipeAdapter;
 import com.example.abhijithsreekar.bakersinn.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class RecipeActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 

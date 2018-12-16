@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.abhijithsreekar.bakersinn.Model.RecipeIngredient;
+import com.example.abhijithsreekar.bakersinn.models.RecipeIngredient;
 
 import java.util.List;
 

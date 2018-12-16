@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.abhijithsreekar.bakersinn.Model.Recipe;
+import com.example.abhijithsreekar.bakersinn.models.Recipe;
 import com.example.abhijithsreekar.bakersinn.R;
 
 import butterknife.BindView;

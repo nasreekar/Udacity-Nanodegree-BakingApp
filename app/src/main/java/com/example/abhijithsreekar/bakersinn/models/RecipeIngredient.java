@@ -1,4 +1,4 @@
-package com.example.abhijithsreekar.bakersinn.Model;
+package com.example.abhijithsreekar.bakersinn.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
