@@ -1,9 +1,10 @@
-package com.example.abhijithsreekar.bakersinn;
+package com.example.abhijithsreekar.bakersinn.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.fragments.StepDetailFragment;
 import com.example.abhijithsreekar.bakersinn.models.RecipeStep;
 import com.example.abhijithsreekar.bakersinn.utils.Constants;

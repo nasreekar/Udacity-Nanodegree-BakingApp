@@ -11,4 +11,9 @@
     <string name="no_internet_connection">No Internet Connection</string>
     <string name="instructions">Instructions</string>
     <string name="procedure_image_placeholder">Instructions Logo</string>
+
+    <!-- Widget Text -->
+    <string name="appwidget_text">@string/app_name</string>
+    <string name="add_widget">Add widget</string>
+    <string name="ingredients_not_found">Ingredients Not Found</string>
 </resources>

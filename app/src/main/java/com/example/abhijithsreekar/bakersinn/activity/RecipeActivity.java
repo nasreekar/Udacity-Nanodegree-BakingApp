@@ -1,9 +1,10 @@
-package com.example.abhijithsreekar.bakersinn;
+package com.example.abhijithsreekar.bakersinn.activity;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.utils.RecipeUtils;
 import com.example.abhijithsreekar.bakersinn.adapters.RecipeAdapter;
 import com.example.abhijithsreekar.bakersinn.databinding.ActivityMainBinding;
