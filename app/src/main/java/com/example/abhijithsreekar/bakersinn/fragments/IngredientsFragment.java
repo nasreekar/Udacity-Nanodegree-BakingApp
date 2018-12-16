@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.adapters.IngredientsAdapter;
 import com.example.abhijithsreekar.bakersinn.models.RecipeIngredient;
+import com.example.abhijithsreekar.bakersinn.utils.Constants;
 
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class IngredientsFragment extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putParcelable("state", ingredientList.getLayoutManager().onSaveInstanceState());
+        outState.putParcelable(Constants.SAVEINSTANCESTATE_INGREDIENTS_STATE, ingredientList.getLayoutManager().onSaveInstanceState());
     }
 
     @Override
@@ -53,7 +54,7 @@ public class IngredientsFragment extends Fragment {
         super.onViewStateRestored(savedInstanceState);
 
         if (savedInstanceState != null) {
-            Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable("state");
+            Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable(Constants.SAVEINSTANCESTATE_INGREDIENTS_STATE);
             ingredientList.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
         }
     }

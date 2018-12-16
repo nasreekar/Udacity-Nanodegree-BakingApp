@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.abhijithsreekar.bakersinn.fragments.IngredientsFragment;
+import com.example.abhijithsreekar.bakersinn.fragments.StepDetailFragment;
 import com.example.abhijithsreekar.bakersinn.fragments.StepsFragment;
 import com.example.abhijithsreekar.bakersinn.models.Recipe;
 import com.example.abhijithsreekar.bakersinn.models.RecipeIngredient;
@@ -17,10 +18,15 @@ import java.util.List;
 public class RecipeDetailsActivity extends AppCompatActivity
         implements StepsFragment.OnStepItemClickListener {
 
+    private boolean mTwoPane;
+    //private RecipeStep stepsModelSave;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_details);
+
+        mTwoPane = checkForTwoPane();
 
         if (getIntent() != null) {
             if (getIntent().hasExtra(Constants.SELECTED_RECIPE_TO_SEE_DETAILS)) {
@@ -28,7 +34,6 @@ public class RecipeDetailsActivity extends AppCompatActivity
 
                 setTitle(recipe.getName());
 
-                int id = recipe.getId();
                 List<RecipeIngredient> ingredients = recipe.getIngredients();
                 List<RecipeStep> steps = recipe.getSteps();
 
@@ -58,10 +63,22 @@ public class RecipeDetailsActivity extends AppCompatActivity
         }
     }
 
+    private boolean checkForTwoPane() {
+        return findViewById(R.id.detail_container) != null;
+    }
+
     @Override
     public void onStepItemClicked(RecipeStep step) {
-        Intent intent = new Intent(this, StepDetailActivity.class);
-        intent.putExtra(Constants.SELECTED_STEP_TO_SEE_VIDEO, step);
-        startActivity(intent);
+        if (mTwoPane) {
+            //stepsModelSave = step;
+            StepDetailFragment recipeStepDetailFragment = StepDetailFragment.newInstance(step);
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.detail_container, recipeStepDetailFragment)
+                    .commit();
+        } else {
+            Intent intent = new Intent(this, StepDetailActivity.class);
+            intent.putExtra(Constants.SELECTED_STEP_TO_SEE_VIDEO, step);
+            startActivity(intent);
+        }
     }
 }
