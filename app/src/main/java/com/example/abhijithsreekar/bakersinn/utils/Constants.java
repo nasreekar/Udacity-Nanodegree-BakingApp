@@ -18,4 +18,7 @@ public final class Constants {
     public static final String PLAYER_CURRENT_BLOCK = "PLAYER_CURRENT_BLOCK";
     public static final String PLAYER_READY_STATUS = "PLAYER_READY_STATUS";
 
+    public static final String SHARED_PREFERENCES = "MyPrefs";
+    public static final String WIDGET_RECIPE = "IngredientsList";
+    public static final String KEY_INGREDIENTS = "Ingredients";
 }

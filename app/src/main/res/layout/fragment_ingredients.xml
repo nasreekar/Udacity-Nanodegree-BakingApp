@@ -14,16 +14,30 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/ingredient_caption"
-            style="@style/FancyLarge"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="@string/ingredients_headline"
-            tools:text="Ingredients" />
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ingredient_caption"
+                style="@style/FancyLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/ingredients_headline"
+                tools:text="Ingredients" />
+
+            <ImageView
+                android:id="@+id/btn_addToWidget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/addToWidget_placeholder"
+                android:src="@android:drawable/ic_input_add" />
+        </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/lv_ingredients"

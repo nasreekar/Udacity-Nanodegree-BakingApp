@@ -3,6 +3,7 @@
     package="com.example.abhijithsreekar.bakersinn">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,7 @@
         <activity android:name=".activity.RecipeDetailsActivity" />
         <activity android:name=".activity.StepDetailActivity" />
 
-        <receiver android:name=".widget.AppWidget">
+        <receiver android:name=".widget.BakersInnAppWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>

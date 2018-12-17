@@ -1,34 +1,27 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:padding="@dimen/widget_margin">
+    android:padding="@dimen/widget_margin"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/recipe_name"
+        style="@style/FancyLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/FancyLarge"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorAccent"
+        android:gravity="center"
         android:padding="@dimen/text_15"
         android:text="@string/recipe_name_placeholder" />
 
-
-    <ListView
-        android:id="@+id/appwidget_list_view"
+    <LinearLayout
+        android:id="@+id/container_ingredients"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/recipe_name"/>
-
-    <TextView
-        android:id="@+id/appwidget_empty_text"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center"
-        android:padding="8dp"
-        android:text="@string/ingredients_not_found"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:visibility="gone" />
+        android:orientation="vertical"
+        android:background="@android:color/white">
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
