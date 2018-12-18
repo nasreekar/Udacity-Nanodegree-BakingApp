@@ -27,10 +27,17 @@ Add UI test cases (Espresso
 
 ### 7" Tablet
 
-| ![Home Screen - Recipe List](https://i.postimg.cc/vH1BC3yK/Screen-Shot-2018-12-18-at-8-58-47-PM.png) | ![Details Activity](https://i.postimg.cc/bv0d3rPN/Screen-Shot-2018-12-18-at-8-59-10-PM.png)| ![Video Screen](https://i.postimg.cc/SQ1RZHB8/Screen-Shot-2018-12-18-at-8-59-28-PM.png) |
-|:---:|:---:|:---:|:---:|
+| ![Home Screen - Recipe List](https://i.postimg.cc/vH1BC3yK/Screen-Shot-2018-12-18-at-8-58-47-PM.png) | ![Details Activity](https://i.postimg.cc/bv0d3rPN/Screen-Shot-2018-12-18-at-8-59-10-PM.png)| 
+|:---:|:---:|
+
+|![Video Screen](https://i.postimg.cc/SQ1RZHB8/Screen-Shot-2018-12-18-at-8-59-28-PM.png) |
+|:---:|
 
 ### 10" Tablet
 
-| ![Home Screen - Recipe List](https://i.postimg.cc/FH3KHz7g/Screen-Shot-2018-12-18-at-9-16-45-PM.png) | ![Details Activity](https://i.postimg.cc/G2qtnf9W/Screen-Shot-2018-12-18-at-9-16-57-PM.png)| ![Video Screen](https://i.postimg.cc/PqMr17bC/Screen-Shot-2018-12-18-at-9-17-12-PM.png) |
-|:---:|:---:|:---:|:---:|
+|![Home Screen - Recipe List](https://i.postimg.cc/FH3KHz7g/Screen-Shot-2018-12-18-at-9-16-45-PM.png)| 
+|:---:|
+|![Details Activity](https://i.postimg.cc/G2qtnf9W/Screen-Shot-2018-12-18-at-9-16-57-PM.png)| 
+|:---:|
+|![Video Screen](https://i.postimg.cc/PqMr17bC/Screen-Shot-2018-12-18-at-9-17-12-PM.png)|
+|:---:|
