@@ -32,7 +32,7 @@ public class BakersInnAppWidget extends AppWidgetProvider {
             RemoteViews ingredientView = new RemoteViews(context.getPackageName(),
                     android.R.layout.activity_list_item);
             ingredientView.setTextViewText(android.R.id.text1,
-                    ingredient.getIngredient() + " (" + ingredient.getMeasure() + ")");
+                    ingredient.getIngredient() + " (" + ingredient.getQuantity() + " " + ingredient.getMeasure() + ")");
             views.addView(R.id.container_ingredients, ingredientView);
         }
         // Instruct the widget manager to update the widget
