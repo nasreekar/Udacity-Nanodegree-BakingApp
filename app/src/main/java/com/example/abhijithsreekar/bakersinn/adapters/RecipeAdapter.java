@@ -67,4 +67,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeViewHolder> implem
         sharedPreferences.edit().putString(Constants.WIDGET_RECIPE, resultJson).apply();
         context.startActivity(intent);
     }
+
+    public void addAll(List<Recipe> movies) {
+        this.recipeList.addAll(movies);
+        notifyDataSetChanged();
+    }
 }

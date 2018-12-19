@@ -10,12 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.abhijithsreekar.bakersinn.R;
 import com.example.abhijithsreekar.bakersinn.models.RecipeStep;
 import com.example.abhijithsreekar.bakersinn.utils.Constants;
-import com.example.abhijithsreekar.bakersinn.utils.RecipeUtils;
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
 import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -104,10 +102,6 @@ public class StepDetailFragment extends Fragment {
 
     private void displayRecipeDetails() {
 
-        if (getContext() != null && RecipeUtils.checkInternetConnection(getContext())) {
-            Toast.makeText(getContext(), R.string.no_internet_connection, Toast.LENGTH_SHORT).show();
-            return;
-        }
         if (stepsModel != null) {
             if (stepDescription != null) {
                 stepDescription.setText(stepsModel.getDescription());

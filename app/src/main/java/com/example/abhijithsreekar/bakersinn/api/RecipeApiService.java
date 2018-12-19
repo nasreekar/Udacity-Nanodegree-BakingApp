@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RecipeApiService {
     private static Retrofit retrofit;
 
-    private static final String API_URL = "https://d17h27t6h515a5.cloudfront.net/topher/2017/May/59121517_baking/";
+    private static final String API_URL = "http://d17h27t6h515a5.cloudfront.net/";
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
     private static HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
